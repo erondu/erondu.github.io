@@ -38,6 +38,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	float: right;
    }
    
+   #previously {
+   	margin-top: 60px;
+   }
+   
    face {
    	position: fixed;
    	bottom: 0;
