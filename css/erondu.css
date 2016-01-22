@@ -112,15 +112,19 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	text-decoration: none;
    }
    
-   p > a:visited {
-   	color: #9B9B9B;
-   }
-   
    a:visited {
    	color: #323233;
    }
    
+   p > a:visited {
+   	color: #9B9B9B;
+   }
+   
    a:hover {
+   	color: #F25B44;
+   }
+   
+   p > a:hover {
    	color: #F25B44;
    }
    
