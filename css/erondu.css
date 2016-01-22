@@ -27,28 +27,27 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    header {
-   	margin: 100px 0 100px 100px;
+   	margin: 160px 0 100px 100px;
    }
    
    #left {
    	margin-left: 100px;
    }
    
-   #right {
-   	position: fixed;
-   	bottom: 0;
-   	right: 0;
-   }
-   
-   #Currently {
+   #currently {
    	margin-top: 100px;
    }
    
-   #Previously {
+   #previously {
    	margin-top: 60px;
    }
    
-   face {
+   #logo {
+   	opacity: .4;
+   	margin-bottom: 100px;
+   }
+   
+   #face {
    	position: fixed;
    	bottom: 0;
    	right: 0;
@@ -68,7 +67,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
 	font-size: 48px;
 	color: #323233;
 	line-height: 62px;
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.16);
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.1);
    }
    
    h2 {
