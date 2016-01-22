@@ -39,6 +39,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    face {
+   	position: fixed;
    	bottom: 0;
    	right: 0;
    }
