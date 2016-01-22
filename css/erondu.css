@@ -40,7 +40,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	right: 0;
    }
    
-   #previously {
+   #Currently {
+   	margin-top: 100px;
+   }
+   
+   #Previously {
    	margin-top: 60px;
    }
    
@@ -51,7 +55,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    #links {
-   	margin-top: 180px;
+   	position: fixed;
+   	bottom: 30px;
    }
    
 /* ===================================
@@ -83,11 +88,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	line-height: 25px;
    }
    
-   footer > li {
+   p {
    	font-family: AdelleSans-Regular;
    	font-size: 14px;
    	color: #9B9B9B;
-   	line-height: 20px;
+   	line-height: 18px;
    }
 
    
@@ -100,6 +105,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	-webkit-transition: all 0.2s ease-in-out;
    	-moz-transition: all 0.2s ease-in-out;  
    	transition: all 0.2s ease-in-out;
+   }
+   
+   p > a {
+   	color: #9B9B9B;
+   	text-decoration: none;
    }
    
    a:visited {
