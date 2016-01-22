@@ -137,15 +137,27 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    media queries and stuff...
    =================================== */
    
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) { 
   	
-  	header, #left {
+  	body {
   		max-width: 85%;
-  		margin: auto;
-  	} 
+  	}
+  	
+  	header {
+  		margin: 80px 0 50px;
+  	}
+  	
+  	#logo {
+  		opacity: .4;
+  		margin-bottom: 50px;
+  	}
+  	
+  	#left {
+  		margin: 0;
+  	}
   	
   	#face {
-  		position: absolute;
+  		position: static;
   		max-width: 100%;
   	}  
   
