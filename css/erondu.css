@@ -59,7 +59,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    ul {
-   	text-decoration: none;
+   	list-style: none;
    }
    
    li {
