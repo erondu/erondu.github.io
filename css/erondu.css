@@ -31,7 +31,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    #left {
-   	float: left;
    	margin-left: 100px;
    }
    
@@ -44,8 +43,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	right: 0;
    }
    
-   footer {
-   	display: block;
+   #links {
+   	margin-top: 180px;
    }
    
 /* ===================================
