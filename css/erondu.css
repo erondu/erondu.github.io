@@ -67,7 +67,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    h2 {
    	font-family: "adelle-sans",sans-serif;
    	font-size: 14px;
-   	line-height: 20px;
+   	line-height: 18px;
    	font-style: normal;
    	font-weight: 400;
    	color: #F25B44;
@@ -86,10 +86,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    p {
-   	font-family: AdelleSans-Regular;
+   	font-family: "adelle-sans",sans-serif;
    	font-size: 14px;
    	line-height: 18px;
-   	color: #9B9B9B;
+   	font-style: normal;
+   	font-weight: 400;
    	margin: 0;
    }
 
