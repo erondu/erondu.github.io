@@ -39,6 +39,15 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	float: right;
    }
    
+   face {
+   	bottom: 0;
+   	right: 0;
+   }
+   
+   footer {
+   	display: block;
+   }
+   
 /* ===================================
    typography and stuff...
    =================================== */
