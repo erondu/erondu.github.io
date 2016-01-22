@@ -65,9 +65,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    h2 {
-   	font-family: "adelle-sans";
+   	font-family: "adelle-sans",sans-serif;
    	font-size: 14px;
    	line-height: 20px;
+   	font-style: normal;
    	font-weight: 400;
    	color: #F25B44;
    	margin: 0 0 6px;
