@@ -65,7 +65,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    h2 {
-   	font-family: AdelleSans-Regular;
+   	font-family: "adelle-sans";
    	font-size: 14px;
    	line-height: 20px;
    	font-weight: 300;
@@ -155,18 +155,18 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
   	}
   	
   	h1 {
-  			font-size: 40px;
-  			line-height: 52px;
+  		font-size: 40px;
+  		line-height: 52px;
   		} 
   	
   	#links {
-  			position: static;
-  			margin-top: 80px;
+  		position: static;
+  		margin-top: 80px;
   		} 
   	
   	#face {
-  		max-width: 100%;
-  		position: relative;
+  		position: static;
+  		width: auto;
   	}
   
    }
