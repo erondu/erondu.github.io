@@ -58,10 +58,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	line-height: 20px;
    }
    
+   ul {
+   	text-decoration: none;
+   }
+   
    li {
    	font-size: 16px;
    	line-height: 25px;
-   	text-decoration: none;
    }
    
    footer > li {
