@@ -142,6 +142,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
   	header, #left {
   		max-width: 85%;
   		margin: auto;
-  	}   
+  	} 
+  	
+  	#face {
+  		position: absolute;
+  		max-width: 100%;
+  	}  
   
    }
