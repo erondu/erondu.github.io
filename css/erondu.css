@@ -154,19 +154,19 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
   		margin-bottom: 40px;
   	}
   	
+  	h1 {
+  			font-size: 40px;
+  			line-height: 52px;
+  		} 
+  	
+  	#links {
+  			position: static;
+  			margin-top: 80px;
+  		} 
+  	
   	#face {
   		max-width: 100%;
   		position: relative;
   	}
-  	
-  	#links {
-  		position: static;
-  		margin-top: 80px;
-  	} 
-  	
-  	h1 {
-  		font-size: 40px;
-  		line-height: 52px;
-  	} 
   
    }
