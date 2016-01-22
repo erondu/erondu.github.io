@@ -26,6 +26,19 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	-webkit-font-smoothing: antialiased;
    }
    
+   header {
+   	margin: 100px 0 100px 100px;
+   }
+   
+   #left {
+   	float: left;
+   	margin-left: 100px;
+   }
+   
+   #right {
+   	float: right;
+   }
+   
 /* ===================================
    typography and stuff...
    =================================== */
@@ -48,6 +61,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    li {
    	font-size: 16px;
    	line-height: 25px;
+   	text-decoration: none;
    }
    
    footer > li {
