@@ -156,8 +156,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
   	}
   	
   	#links {
-  		position: fixed;
-  		bottom: 30px;
+  		position: static;
+  		margin-top: 80px;
   	}  
   
    }
