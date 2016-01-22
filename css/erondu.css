@@ -18,33 +18,26 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
    
    body {
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 160px auto 0;
+   	padding: 0 100px;
    	background: #fff;
    	font-family: "PT Serif", "georgia", serif;
    	color: #4B4C4D;
    	text-rendering: optimizeLegibility;
-   	-webkit-font-smoothing: antialiased;
    }
    
    header {
-   	margin: 160px 0 100px 100px;
-   }
-   
-   #left {
-   	margin-left: 100px;
-   }
-   
-   #currently {
-   	margin-top: 100px;
-   }
-   
-   #previously {
-   	margin-top: 60px;
+   	margin: 0 0 100px;
    }
    
    #logo {
    	opacity: .4;
    	margin-bottom: 80px;
+   }
+      
+   #previously {
+   	margin-top: 60px;
    }
    
    #face {
@@ -140,25 +133,31 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    @media screen and (max-width: 768px) { 
   	
   	body {
-  		max-width: 85%;
+  		margin: 80px auto auto 0;
+  		padding: 0 40px;
+  		overflow-x: hidden;
+  		-webkit-transition: all 0.2s ease-in-out;
+  		-moz-transition: all 0.2s ease-in-out;  
+  		transition: all 0.2s ease-in-out;
   	}
   	
   	header {
-  		margin: 80px 0 50px;
+  		margin: 0 0 80px;
   	}
   	
   	#logo {
   		opacity: .4;
-  		margin-bottom: 50px;
-  	}
-  	
-  	#left {
-  		margin: 0;
+  		margin-bottom: 40px;
   	}
   	
   	#face {
-  		position: static;
   		max-width: 100%;
+  		position: relative;
+  	}
+  	
+  	#links {
+  		position: fixed;
+  		bottom: 30px;
   	}  
   
    }
