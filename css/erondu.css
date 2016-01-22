@@ -140,7 +140,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
   	
   	body {
   		margin: 80px auto auto 0;
-  		padding: 0 40px;
+  		padding: 0 30px;
   		overflow-x: hidden;
   		-webkit-transition: all 0.2s ease-in-out;
   		-moz-transition: all 0.2s ease-in-out;  
