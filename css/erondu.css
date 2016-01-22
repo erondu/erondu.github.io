@@ -134,6 +134,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    =================================== */
    
    @media screen and (max-width: 768px) {
-     
+  	
+  	header, #left {
+  		max-width: 85%;
+  		margin: auto;
+  	}   
   
    }
