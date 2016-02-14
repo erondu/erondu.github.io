@@ -12,11 +12,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
 /* ================================================================
    html, body, nav, hgroup, section, article,  styles and stuff...
    ================================================================ */
-   
+
    html {
    	height: 100%;
    }
-   
+
    body {
     max-width: 1200px;
     margin: 160px auto 0;
@@ -25,37 +25,79 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	font-family: "PT Serif", "georgia", serif;
    	color: #4B4C4D;
    	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
    }
-   
+
    header {
    	margin: 0 0 100px;
+    position: relative;
+    z-index: 2;
    }
-   
+
    #logo {
    	opacity: .4;
    	margin-bottom: 80px;
    }
-      
+
+   #left {
+    position: relative;
+    z-index: 2;
+  }
+
    #currently {
    	margin-bottom: 60px;
    }
-   
+
    #face {
    	position: fixed;
    	bottom: 0;
    	right: 0;
+    z-index: 1;
    }
-   
+
+   @media screen and (max-height: 800px) {
+    #face {
+      bottom: auto;
+      top: 500px;
+    }
+   }
+
+   #face img {
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+   }
+
+   @media screen and (max-width: 1340px) {
+    #face {
+      width: 70%;
+    }
+   }
+
+   @media screen and (max-width: 800px) {
+    #face {
+      width: auto;
+    }
+   }
+
    #links {
    	position: fixed;
    	bottom: 40px;
    }
-   
+
+   @media screen and (max-height: 940px) {
+    #links {
+      bottom: auto;
+      position: relative;
+      margin-top: 40px;
+    }
+   }
+
 /* ===================================
    typography and stuff...
    =================================== */
-   
-   h1 { 
+
+   h1 {
 	font-size: 48px;
 	line-height: 62px;
 	font-weight: 300;
@@ -63,7 +105,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
 	text-shadow: 0px 1px 2px rgba(0,0,0,0.16);
 	margin: 0;
    }
-   
+
    h2 {
    	font-family: "adelle-sans",sans-serif;
    	font-size: 14px;
@@ -73,18 +115,18 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	color: #F25B44;
    	margin: 0 0 6px;
    }
-   
+
    ul {
    	list-style: none;
-   	
+
    }
-   
+
    li {
    	font-size: 16px;
    	line-height: 25px;
    	margin: 0;
    }
-   
+
    p {
    	font-family: "adelle-sans",sans-serif;
    	font-size: 14px;
@@ -94,81 +136,84 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    	margin: 0;
    }
 
-   
+
 /* ===================================
    anchors and stuff...
    =================================== */
-   
+
    a {
    	color: #323233;
    	-webkit-transition: all 0.2s ease-in-out;
-   	-moz-transition: all 0.2s ease-in-out;  
+   	-moz-transition: all 0.2s ease-in-out;
    	transition: all 0.2s ease-in-out;
    }
-   
+
    p > a {
    	color: #9B9B9B;
    	text-decoration: none;
    }
-   
+
    a:visited {
    	color: #323233;
    }
-   
+
    p > a:visited {
    	color: #9B9B9B;
    }
-   
+
    a:hover {
    	color: #F25B44;
    }
-   
+
    p > a:hover {
    	color: #F25B44;
    }
-   
+
    a:active,
    a:focus{
    }
 
-   
+
 /* ===================================
    media queries and stuff...
    =================================== */
-   
-   @media screen and (max-width: 768px) { 
-  	
+
+   @media screen and (max-width: 768px) {
+
   	body {
   		margin: 80px auto auto 0;
   		padding: 0 30px;
   		overflow-x: hidden;
   		-webkit-transition: all 0.2s ease-in-out;
-  		-moz-transition: all 0.2s ease-in-out;  
+  		-moz-transition: all 0.2s ease-in-out;
   		transition: all 0.2s ease-in-out;
   	}
-  	
+
   	header {
   		margin: 0 0 80px;
   	}
-  	
+
   	#logo {
   		opacity: .4;
   		margin-bottom: 40px;
   	}
-  	
+
   	h1 {
   		font-size: 40px;
   		line-height: 52px;
-  		} 
-  	
+  		}
+
   	#links {
   		position: static;
   		margin-top: 80px;
-  		} 
-  	
+  		}
+
   	#face {
   		position: static;
+      text-align: center;
   		width: auto;
+      top: auto;
+      bottom: auto;
   	}
-  
+
    }
