@@ -5,11 +5,13 @@
 		<title>Jared Erondu - Designer, Writer, Startup Advisor</title>
 
 		<link href="css/erondu.css" rel="stylesheet" />
-		<link href="css/animate.css" rel="stylesheet" />
-		<script src="https://use.typekit.net/oda0fjf.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+			(function() {
+				var saved = localStorage.getItem('theme');
+				if (saved) document.documentElement.setAttribute('data-theme', saved);
+			})();
+		</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
 		<!--[if lt IE 9]>
@@ -18,41 +20,69 @@
 	</head>
 
 	<body>
-			<header class="animated bounceInDown">
+		<div id="page">
+			<header>
 				<img src="assets/erondu.png" alt="Erondu Logo" id="logo" />
-				<h1>a relentless mind focused on design and frameworks.</h1>
+				<h1>thinker, tinkerer.</h1>
 			</header>
 
 			<div id="left">
 				<div id="currently">
 					<h2>Currently</h2>
 					<ul>
-						<li>Head of Design, <a href="http://lattice.com" target="_blank">Lattice</a>.</li>
-						<li>Building, <a href="http://askplaybook.com" target="_blank">Playbook</a> & <a href="http://highresolution.design" target="_blank">High Resolution</a>.</li>
-						<li>Design Ambassador, <a href="http://greylock.com" target="_blank">Greylock Partners</a>.</li>
-						<li>Sometimes, Startup Advisor & <a href="http://unsplash.com/erondu" target="_blank">Faux-tographer</a>.</li>
+						<li>Head of Design, <a href="http://span.app" target="_blank">Span</a>.</li>
+						<li>Startup Advisor & Investor.</li>
+						<li>Occasional <a href="http://unsplash.com/erondu" target="_blank">Faux-tographer</a>.</li>
 					</ul>
 				</div>
 
 				<div id="previously">
 					<h2>Previously</h2>
 					<ul>
+						<li>SVP of Design & Marketing, <a href="http://lattice.com" target="_blank">Lattice</a>.</li>
 						<li>Creative Director, <a href="http://teespring.com" target="_blank">Teespring</a>.</li>
 						<li>First designer, <a href="http://omadahealth.com" target="_blank">Omada Health</a>.</li>
-						<li>Co-founded, <a href="http://twitter.com/industry" target="_blank">The Industry</a> & <a href="https://www.google.com/search?q=evomail" target="_blank">Evomail</a>.</li>
-						<li>Editor, <a href="http://teamtreehouse.com" target="_blank">Treehouse</a>.</li>
+						<li>Co-creator, <a href="http://askplaybook.com" target="_blank">Playbook</a> & <a href="http://highresolution.design" target="_blank">High Resolution</a>.</li>
+						<li>Co-founder, <a href="http://twitter.com/industry" target="_blank">The Industry</a> & <a href="https://www.google.com/search?q=evomail" target="_blank">Evomail</a>.</li>
 					</ul>
 				</div>
 
-				<div id="links">
-					<p><a href="http://blog.erondu.com" target="_blank">Blog</a> &middot <a href="http://dribbble.com/erondu" target="_blank">Dribbble</a> &middot <a href="http://instagram.com/erondu" target="_blank">Instagram</a> &middot <a href="https://www.linkedin.com/in/erondu" target="_blank">LinkedIn</a> &middot <a href="http://twitter.com/erondu" target="_blank">Twitter</a>
-					</p>
-				</div>
 			</div>
+		</div>
 
-			<div id="face">
-				<a href="mailto:jared@erondu.com?subject=Why, hello there handsome man!"><img src="assets/headshot.png" alt="Jared Erondu Headshot" /></a>
-			</div>
-			<script type="text/javascript" src="assets/retina.js"></script>
+		<div id="links">
+			<p><a href="http://blog.erondu.com" target="_blank">Blog</a> &middot <a href="http://instagram.com/erondu" target="_blank">Instagram</a> &middot <a href="https://www.linkedin.com/in/erondu" target="_blank">LinkedIn</a> &middot <a href="http://twitter.com/erondu" target="_blank">Twitter</a> &middot <button id="theme-toggle" aria-label="Toggle dark mode"></button>
+			</p>
+		</div>
+
+<script type="text/javascript" src="assets/retina.js"></script>
+	<script>
+		(function() {
+			var btn = document.getElementById('theme-toggle');
+
+			function getEffectiveTheme() {
+				var saved = localStorage.getItem('theme');
+				if (saved) return saved;
+				return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+
+			function applyTheme(theme) {
+				document.documentElement.setAttribute('data-theme', theme);
+				btn.textContent = theme === 'dark' ? '☀' : '☾';
+			}
+
+			applyTheme(getEffectiveTheme());
+
+			btn.addEventListener('click', function() {
+				var next = getEffectiveTheme() === 'dark' ? 'light' : 'dark';
+				localStorage.setItem('theme', next);
+				applyTheme(next);
+			});
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+				if (!localStorage.getItem('theme')) applyTheme(getEffectiveTheme());
+			});
+		})();
+	</script>
 	</body>
 </html>
