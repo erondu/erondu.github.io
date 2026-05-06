@@ -56,6 +56,7 @@
 	</head>
 
 	<body>
+		<canvas id="filings-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
 		<div id="page">
 			<header>
 				<img src="assets/erondu.png" alt="Erondu" id="logo" />
@@ -90,6 +91,7 @@
 			</p>
 		</div>
 
+		<script src="assets/magnetic-filings.js"></script>
 		<script>
 			(function() {
 				var btn = document.getElementById('theme-toggle');
