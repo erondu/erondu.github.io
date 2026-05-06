@@ -10,8 +10,116 @@
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif;color:#222}body{margin:0;font-size:1em;line-height:1.4}::-moz-selection{background:RGBA(0,0,0,0.9);color:#fff;text-shadow:none}::selection{background:RGBA(0,0,0,0.9);color:#fff;text-shadow:none}a{color:#00e}a:visited{color:#551a8b}a:hover{color:#06e}a:focus{outline:thin dotted}a:hover,a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}ins{background:#ff9;color:#000;text-decoration:none}mark{background:#ff0;color:#000;font-style:italic;font-weight:bold}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:"";content:none}small{font-size:85%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin:0;padding:0 0 0 0}dd{margin: 0}nav ul,nav ol{list-style:none;list-style-image:none;margin:0;padding:0}img{border:0;-ms-interpolation-mode:bicubic;vertical-align:middle}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:0;margin:0;padding:0}label{cursor:pointer}legend{border:0;*margin-left:-7px;padding:0;white-space:normal}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*width:13px;*height:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top;resize:vertical}input:invalid,textarea:invalid{background-color:#f0dddd}table{border-collapse:collapse;border-spacing:0}td{vertical-align:top}.chromeframe{margin:.2em 0;background:#ccc;color:black;padding:.2em 0}
 
 /* ================================================================
+   Roobert font faces
+   ================================================================ */
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-RegularItalic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roobert';
+	src: url('../type/Roobert-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/* ================================================================
    html, body, nav, hgroup, section, article,  styles and stuff...
    ================================================================ */
+
+:root {
+	--bg: #fff;
+	--text: #4B4C4D;
+	--heading: #323233;
+	--link: #323233;
+	--link-muted: #9B9B9B;
+	--accent: #F25B44;
+	--logo-filter: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #111;
+		--text: #a8a8a9;
+		--heading: #d4d4d5;
+		--link: #d4d4d5;
+		--link-muted: #666;
+		--logo-filter: invert(1);
+	}
+}
+
+[data-theme="dark"] {
+	--bg: #111;
+	--text: #a8a8a9;
+	--heading: #d4d4d5;
+	--link: #d4d4d5;
+	--link-muted: #666;
+	--logo-filter: invert(1);
+}
+
+[data-theme="light"] {
+	--bg: #fff;
+	--text: #4B4C4D;
+	--heading: #323233;
+	--link: #323233;
+	--link-muted: #9B9B9B;
+	--logo-filter: none;
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#page,
+#links {
+	animation: fadeUp 300ms ease-out both;
+}
 
    html {
    	height: 100%;
@@ -21,11 +129,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
     max-width: 1200px;
     margin: 120px auto 0;
    	padding: 0 100px;
-   	background: #fff;
-   	font-family: "PT Serif", "georgia", serif;
-   	color: #4B4C4D;
+   	background: var(--bg);
+   	font-family: 'Roobert', sans-serif;
+   	color: var(--text);
    	text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
    }
 
    header {
@@ -100,14 +209,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    h1 {
 	font-size: 48px;
 	line-height: 62px;
-	font-weight: 300;
-	color: #323233;
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.16);
+	font-weight: 400;
+	color: var(--heading);
 	margin: 0;
    }
 
    h2 {
-   	font-family: "adelle-sans",sans-serif;
+   	font-family: 'Roobert', sans-serif;
    	font-size: 14px;
    	line-height: 18px;
    	font-style: normal;
@@ -128,7 +236,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    }
 
    p {
-   	font-family: "adelle-sans",sans-serif;
+   	font-family: 'Roobert', sans-serif;
    	font-size: 14px;
    	line-height: 18px;
    	font-style: normal;
@@ -142,31 +250,51 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
    =================================== */
 
    a {
-   	color: #323233;
+   	color: var(--link);
    	-webkit-transition: all 0.2s ease-in-out;
    	-moz-transition: all 0.2s ease-in-out;
    	transition: all 0.2s ease-in-out;
    }
 
    p > a {
-   	color: #9B9B9B;
+   	color: var(--link-muted);
    	text-decoration: none;
    }
 
    a:visited {
-   	color: #323233;
+   	color: var(--link);
    }
 
    p > a:visited {
-   	color: #9B9B9B;
+   	color: var(--link-muted);
    }
 
    a:hover {
-   	color: #F25B44;
+   	color: var(--accent);
    }
 
    p > a:hover {
-   	color: #F25B44;
+   	color: var(--accent);
+   }
+
+   #logo {
+   	filter: var(--logo-filter);
+   }
+
+   #theme-toggle {
+   	background: none;
+   	border: none;
+   	cursor: pointer;
+   	color: var(--link-muted);
+   	font-size: 14px;
+   	padding: 0;
+   	font-family: inherit;
+   	transition: color 0.2s ease-in-out;
+   	vertical-align: baseline;
+   }
+
+   #theme-toggle:hover {
+   	color: var(--accent);
    }
 
    a:active,
