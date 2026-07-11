@@ -24,7 +24,11 @@
 </head>
 <body>
   <header class="utility-bar">
-    <a class="monogram" href="#about" aria-label="Back to introduction" data-scramble-logo>e</a>
+    <a class="monogram" href="#about" aria-label="Back to introduction" data-scramble-logo>
+      <svg class="monogram-svg" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+        <text class="monogram-letter" x="50%" y="50%" dominant-baseline="central" text-anchor="middle">e</text>
+      </svg>
+    </a>
     <div class="utility-actions">
       <div class="socials" aria-label="Social links">
         <a href="https://x.com/erondu" target="_blank" rel="noopener" aria-label="X / Twitter" data-label="X">𝕏</a>
@@ -366,19 +370,20 @@
       updateClock(); setInterval(updateClock, 1000);
 
       var monogram = document.querySelector('[data-scramble-logo]');
+      var monogramLetter = monogram ? monogram.querySelector('.monogram-letter') : null;
       var monogramTimer;
       function resetMonogram() {
         clearInterval(monogramTimer);
-        if (monogram) monogram.textContent = 'e';
+        if (monogramLetter) monogramLetter.textContent = 'e';
       }
       function scrambleMonogram() {
-        if (!monogram || reduceMotion) return;
+        if (!monogram || !monogramLetter || reduceMotion) return;
         var glyphs = ['3','ɘ','ë','€','E','e','∑','e'];
         var index = 0;
         clearInterval(monogramTimer);
         monogram.classList.add('is-scrambling');
         monogramTimer = setInterval(function () {
-          monogram.textContent = glyphs[index] || 'e';
+          monogramLetter.textContent = glyphs[index] || 'e';
           index += 1;
           if (index > glyphs.length) {
             resetMonogram();
