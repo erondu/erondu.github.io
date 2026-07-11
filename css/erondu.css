@@ -25,9 +25,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .terminal-typing:after{content:"";display:inline-block;width:6px;height:1.15em;margin-left:4px;background:var(--accent);vertical-align:-.18em;animation:terminalBlink 1s steps(1) infinite}
 
 .utility-bar{position:sticky;z-index:40;top:0;height:78px;width:100%;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;background:transparent;backdrop-filter:none}
-.monogram{display:inline-grid;place-items:center;width:.62em;font-size:54px;font-weight:800;line-height:.8;letter-spacing:-.09em;transition:color .16s ease,transform .16s ease}
+.monogram{display:inline-grid;place-items:center;width:34px;height:34px;font-size:54px;font-weight:800;line-height:1;letter-spacing:-.09em;transition:color .16s ease,transform .16s ease}
 .monogram:hover,.monogram:focus-visible,.monogram.is-scrambling{color:var(--tertiary);transform:translateY(-1px)}
-.utility-actions{display:flex;align-items:center;gap:10px;color:var(--muted);font:13px ui-monospace,SFMono-Regular,Menlo,monospace}
+.utility-actions{min-height:34px;display:flex;align-items:center;gap:10px;color:var(--muted);font:13px ui-monospace,SFMono-Regular,Menlo,monospace}
 .local-time{font-variant-numeric:tabular-nums;min-width:90px;text-align:right;white-space:nowrap}
 .socials{display:flex;align-items:center;gap:3px}
 .socials a{position:relative;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:14px;font-weight:600;color:var(--muted);transition:background .18s cubic-bezier(.2,.8,.2,1),color .18s cubic-bezier(.2,.8,.2,1),transform .18s cubic-bezier(.2,.8,.2,1)}
