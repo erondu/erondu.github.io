@@ -24,10 +24,9 @@
 </head>
 <body>
   <header class="utility-bar">
-    <a class="monogram" href="#about" aria-label="Back to introduction" data-scramble-logo>
+    <a class="monogram" href="#about" aria-label="Back to introduction">
       <svg class="monogram-svg" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
         <path class="monogram-mark" fill-rule="evenodd" d="M22 5C11.8 5 5 12.4 5 22.4C5 32.5 12.2 39 22.7 39C30.4 39 35.6 35.6 38 29.9H29.7C28.4 32 26.2 33.2 22.9 33.2C18.4 33.2 15.2 30.6 14.4 26.2H39C39.2 25.1 39.3 24 39.3 22.9C39.3 12.6 32.5 5 22 5ZM21.9 10.9C25.9 10.9 28.9 13.4 30 17.8H14.6C15.7 13.5 18.4 10.9 21.9 10.9Z"/>
-        <text class="monogram-letter" x="50%" y="50%" dominant-baseline="central" text-anchor="middle" hidden>e</text>
       </svg>
     </a>
     <div class="utility-actions">
@@ -369,48 +368,6 @@
         document.getElementById('local-time').textContent = 'NYC ' + time;
       }
       updateClock(); setInterval(updateClock, 1000);
-
-      var monogram = document.querySelector('[data-scramble-logo]');
-      var monogramMark = monogram ? monogram.querySelector('.monogram-mark') : null;
-      var monogramLetter = monogram ? monogram.querySelector('.monogram-letter') : null;
-      var monogramTimer;
-      function resetMonogram() {
-        clearInterval(monogramTimer);
-        if (monogramMark) monogramMark.removeAttribute('hidden');
-        if (monogramLetter) {
-          monogramLetter.textContent = 'e';
-          monogramLetter.setAttribute('hidden', '');
-        }
-      }
-      function scrambleMonogram() {
-        if (!monogram || !monogramLetter || reduceMotion) return;
-        var glyphs = ['3','ɘ','ë','€','E','e','∑','e'];
-        var index = 0;
-        clearInterval(monogramTimer);
-        monogram.classList.add('is-scrambling');
-        if (monogramMark) monogramMark.setAttribute('hidden', '');
-        monogramLetter.removeAttribute('hidden');
-        monogramTimer = setInterval(function () {
-          monogramLetter.textContent = glyphs[index] || 'e';
-          index += 1;
-          if (index > glyphs.length) {
-            resetMonogram();
-            monogram.classList.remove('is-scrambling');
-          }
-        }, 42);
-      }
-      if (monogram) {
-        monogram.addEventListener('mouseenter', scrambleMonogram);
-        monogram.addEventListener('focus', scrambleMonogram);
-        monogram.addEventListener('mouseleave', function () {
-          resetMonogram();
-          monogram.classList.remove('is-scrambling');
-        });
-        monogram.addEventListener('blur', function () {
-          resetMonogram();
-          monogram.classList.remove('is-scrambling');
-        });
-      }
 
       function closeNestedReveals(copy) {
         copy.querySelectorAll('.inline-reveal').forEach(function (childButton) { childButton.setAttribute('aria-expanded', 'false'); });
