@@ -1,120 +1,574 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Jared Erondu - Designer, Writer, Startup Advisor</title>
-		<meta name="description" content="Jared Erondu is a designer, writer, and startup advisor. Currently Head of Design at Span. Previously SVP at Lattice, Creative Director at Teespring, and first designer at Omada Health.">
-		<link rel="canonical" href="https://erondu.com">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jared Erondu</title>
+  <meta name="description" content="I'm a design leader, investor, and advisor. Currently Head of Design at Span. Most recently SVP at Lattice.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/erondu.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6L92N8Q9PF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6L92N8Q9PF');
+  </script>
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      var saved = localStorage.getItem('theme');
+      if (saved && saved !== 'system') document.documentElement.dataset.theme = saved;
+    }());
+  </script>
+</head>
+<body>
+  <header class="utility-bar">
+    <a class="monogram" href="#about" aria-label="Back to introduction" data-scramble-logo>e</a>
+    <div class="utility-actions">
+      <div class="socials" aria-label="Social links">
+        <a href="https://x.com/erondu" target="_blank" rel="noopener" aria-label="X / Twitter" data-label="X">𝕏</a>
+        <a href="https://linkedin.com/in/erondu" target="_blank" rel="noopener" aria-label="LinkedIn" data-label="LinkedIn">in</a>
+        <a href="https://youtube.com/highresolution" target="_blank" rel="noopener" aria-label="YouTube" data-label="YouTube"><span class="youtube-icon" aria-hidden="true"></span></a>
+        <a href="mailto:jared@erondu.com" aria-label="Email" data-label="Email">@</a>
+      </div>
+      <span class="utility-divider" aria-hidden="true"></span>
+      <div class="theme-picker">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Choose color theme" aria-haspopup="menu" aria-expanded="false">
+          <span class="theme-icon" id="theme-icon" aria-hidden="true">◐</span><span id="theme-label">Auto</span><svg class="chevron" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button role="menuitemradio" data-theme-choice="system" aria-checked="true">Auto<span>◐</span></button>
+          <button role="menuitemradio" data-theme-choice="light" aria-checked="false">Light<span>☼</span></button>
+          <button role="menuitemradio" data-theme-choice="dark" aria-checked="false">Dark<span>☾</span></button>
+        </div>
+      </div>
+      <span class="local-time" id="local-time">NYC --:--:--</span>
+    </div>
+  </header>
 
-		<!-- Open Graph -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://erondu.com">
-		<meta property="og:title" content="Jared Erondu - Designer, Writer, Startup Advisor">
-		<meta property="og:description" content="Jared Erondu is a designer, writer, and startup advisor. Currently Head of Design at Span.">
+  <main>
+    <section class="hero section" id="about" data-section="About">
+      <p class="eyebrow hero-status"><span>designer, operator &amp; investor</span><i aria-hidden="true"></i></p>
+      <h1>I’m Jared. I build ambitious teams, products, and companies.</h1>
+      <div class="bio-copy">
+        <p>
+          I’m a <button class="inline-reveal" data-reveal="builder-detail" aria-expanded="false">builder</button><span class="bio-expansion" id="builder-detail" hidden>. Design is the craft I’ve spent the most time refining, but I've held positions across product, marketing, and content. The through line has always been understanding people and building things they love</span>. I’m also a design leader and investor. I started by <button class="inline-reveal" data-reveal="writing-detail" aria-expanded="false">writing about technology</button><span class="bio-expansion" id="writing-detail" hidden> at various sites, eventually co-founding <a class="bio-link" href="https://x.com/industry" target="_blank" rel="noopener">The Industry</a> with <a class="bio-link" href="https://x.com/drewwilson" target="_blank" rel="noopener">Drew Wilson</a>. We built an editorial team of 12 that covered the intersection of design and technology, <button class="inline-reveal inline-more" data-reveal="writing-more" aria-expanded="false">hosted a podcast</button><span class="bio-expansion" id="writing-more" hidden> called <a class="bio-link" href="https://open.spotify.com/show/54NkxgP3qDBjryc2tcqZ95" target="_blank" rel="noopener">The Industry Radio Show</a> with Drew and <a class="bio-link" href="https://x.com/adamstac" target="_blank" rel="noopener">Adam Stacoviak</a>, which was consistently one of the top design podcasts on Apple and streamed 1M+ times</span>, and documented many of the design-led products that defined that era of software</span>. Then I got obsessed with molding it. So I skipped college and went head-first.
+        </p>
+        <p>
+          <button class="inline-reveal" data-reveal="founding-detail" aria-expanded="false">I’ve founded companies</button><span class="bio-expansion" id="founding-detail" hidden> — including <a class="bio-link" href="https://techcrunch.com/2013/09/05/evomails-gesture-based-email-app-arrives-android/" target="_blank" rel="noopener">Evomail</a> back in 2012. It was an iOS email app built around the thesis that the iPad could become a serious computing platform and would need a better professional email experience. We raised money, shipped across devices, learned a lot, and eventually shut it down —</span> and done a lot of <button class="inline-reveal" data-reveal="product-detail" aria-expanded="false">early-stage work</button><span class="bio-expansion" id="product-detail" hidden> as a founding designer at <a class="bio-link" href="https://www.omadahealth.com/" target="_blank" rel="noopener">Omada Health</a>, Lift (now <a class="bio-link" href="https://coach.me/" target="_blank" rel="noopener">Coach.me</a>) and <a class="bio-link" href="https://teespring.com/" target="_blank" rel="noopener">Teespring</a></span>, and <button class="inline-reveal" data-reveal="teams-detail" aria-expanded="false">led teams at scale</button><span class="bio-expansion" id="teams-detail" hidden> most recently at Lattice, where I spent 8 years. During that journey, we went from seed to Series F and grew from a handful of employees to ~1,000. I started as Head of Design and scaled the team to 40+. In later years, my role expanded to GM of a core platform org and eventually to SVP of Marketing. In all, I had the privilege of leading teams across design, research, product, engineering, brand, marketing, demand generation, and operations</span>. Now I lead design at <button class="inline-reveal" data-reveal="span-detail" aria-expanded="false">Span</button><span class="bio-expansion" id="span-detail" hidden>, where we build tools to help EPD teams navigate AI transformation and increase their ROI from this new technology. We're <a class="bio-link" href="https://www.span.app/careers" target="_blank" rel="noopener">hiring</a> and having fun</span>. I also <button class="inline-reveal" data-reveal="advisor-detail" aria-expanded="false">advise</button><span class="bio-expansion" id="advisor-detail" hidden> teams on product strategy, design work, and building strong creative functions. That work has included Y Combinator, <button class="inline-reveal inline-more" data-reveal="mit-more" aria-expanded="false">MIT Media Lab</button><span class="bio-expansion" id="mit-more" hidden>, where I worked with <a class="bio-link" href="https://www.linkedin.com/in/deb-roy-662a644/" target="_blank" rel="noopener">Deb Roy</a>, <a class="bio-link" href="https://x.com/elleluna" target="_blank" rel="noopener">Elle Luna</a>, and <a class="bio-link" href="https://x.com/raphaelschaad" target="_blank" rel="noopener">Raphael Schaad</a> to build an operating system for inexpensive Android devices designed to connect women in a small Indian village with each other</span>, Ironclad, Owner, Front, Greylock Partners, and others</span>, invest in <button class="inline-reveal" data-reveal="founders-detail" aria-expanded="false">founders</button><span class="bio-expansion" id="founders-detail" hidden> who are relentless, deeply obsessed with product, and clear about “why now and why them”</span>, and contribute to the <button class="inline-reveal" data-reveal="community-detail" aria-expanded="false">community</button><span class="bio-expansion" id="community-detail" hidden> through projects like High Resolution and Playbook</span>.
+        </p>
+        <p>
+          I care about <button class="inline-reveal" data-reveal="craft-detail" aria-expanded="false">craft</button><span class="bio-expansion" id="craft-detail" hidden> because I believe the natural gravitational pull of most work is toward mediocrity. Good work requires active resistance: higher standards, sharper taste, better communication, and more care than the average system will ask of you. Craft has <button class="inline-reveal inline-more" data-reveal="craft-more" aria-expanded="false">human value</button><span class="bio-expansion" id="craft-more" hidden>, not just business value. Life is short. If you are capable of making something better, clearer, more useful, or more delightful, why wouldn’t you</span></span>. I also care about <button class="inline-reveal" data-reveal="judgment-detail" aria-expanded="false">strong judgment</button><span class="bio-expansion" id="judgment-detail" hidden> rooted in deeply understanding people. This matters because customers reveal problems more often than solutions. Great product work still requires a point of view, conviction, and instinct. Especially in an increasingly AI-augmented world</span>. And I care about <button class="inline-reveal" data-reveal="business-detail" aria-expanded="false">business outcomes</button><span class="bio-expansion" id="business-detail" hidden>, because the best product designers are business thinkers. They seek as much signal as they can get to widen their aperture for identifying opportunities</span>. Outside the work, there’s <button class="inline-reveal" data-reveal="life-detail" aria-expanded="false">family, pool, and photography</button><span class="bio-expansion" id="life-detail" hidden>: I’m married with two kids, live in Greenwich, spend a lot of time in New York, once got seriously into pool, and still notice the world through a camera. <button class="inline-reveal inline-more" data-reveal="life-more" aria-expanded="false">Photography</button><span class="bio-expansion" id="life-more" hidden> is less active now, but it is still part of how I see: light, place, composition, and the details most people walk past. <a class="bio-link" href="https://unsplash.com/@erondu" target="_blank" rel="noopener">Some of that lives on Unsplash</a></span></span>.
+        </p>
+      </div>
 
-		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@erondu">
-		<meta name="twitter:creator" content="@erondu">
-		<meta name="twitter:title" content="Jared Erondu - Designer, Writer, Startup Advisor">
-		<meta name="twitter:description" content="Jared Erondu is a designer, writer, and startup advisor. Currently Head of Design at Span.">
+    </section>
 
-		<link rel="icon" href="img/favicon.png" type="image/png">
-		<link href="css/erondu.css" rel="stylesheet">
+    <section class="section" id="projects" data-section="Projects">
+      <div class="section-intro">
+        <p class="eyebrow section-path"><span>~/projects</span><kbd>2</kbd></p>
+        <h2>Things I’ve made for the design community.</h2>
+      </div>
+      <div class="project-grid">
+        <a class="project-card high-res" href="https://www.highresolution.design/" target="_blank" rel="noopener">
+          <div>
+            <h3>High Resolution</h3>
+            <p>A 25-episode video series where design leaders from companies like Airbnb, IDEO, Google, and Microsoft share how they drive business success through design.</p>
+            <ul class="project-stats">
+              <li>#1 ranked design podcast at launch</li>
+              <li>1,000+ hours of content</li>
+              <li>7M+ total streams worldwide</li>
+            </ul>
+          </div>
+          <span class="card-arrow">↗</span>
+        </a>
+        <a class="project-card playbook" href="https://askplaybook.com/" target="_blank" rel="noopener">
+          <div>
+            <h3>Playbook</h3>
+            <p>Was a knowledge-sharing platform. A practical library of questions and answers for designers building their careers.</p>
+            <ul class="project-stats">
+              <li>40 contributors</li>
+              <li>100 curated questions</li>
+              <li>7,000 members</li>
+            </ul>
+          </div>
+          <span class="card-arrow">↗</span>
+        </a>
+      </div>
+    </section>
 
-		<script>
-			(function() {
-				var saved = localStorage.getItem('theme');
-				if (saved) document.documentElement.setAttribute('data-theme', saved);
-			})();
-		</script>
+    <section class="section" id="investments" data-section="Investments">
+      <div class="section-intro">
+        <p class="eyebrow section-path"><span>~/investments</span><kbd>3</kbd></p>
+        <h2>Backing founders and ideas I believe in.</h2>
+      </div>
+      <div class="investment-browser">
+        <div class="company-list-wrap">
+          <div class="company-list" aria-label="Portfolio companies">
+            <button class="company active" data-company="compound" aria-pressed="true"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=compoundplanning.com&amp;sz=64" alt="" aria-hidden="true"><span>Compound</span></span></button>
+            <button class="company" data-company="daisie" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=daisie.com&amp;sz=64" alt="" aria-hidden="true"><span>Daisie</span></span></button>
+            <button class="company" data-company="diagram" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=diagram.com&amp;sz=64" alt="" aria-hidden="true"><span>Diagram</span></span><small>Exited / Defunct</small></button>
+            <button class="company" data-company="dock" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=dock.us&amp;sz=64" alt="" aria-hidden="true"><span>Dock</span></span></button>
+            <button class="company" data-company="dupe" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=dupe.com&amp;sz=64" alt="" aria-hidden="true"><span>Dupe</span></span></button>
+            <button class="company" data-company="every" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=every.to&amp;sz=64" alt="" aria-hidden="true"><span>Every</span></span></button>
+            <button class="company" data-company="gradual" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=gradual.com&amp;sz=64" alt="" aria-hidden="true"><span>Gradual</span></span></button>
+            <button class="company" data-company="heard" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=joinheard.com&amp;sz=64" alt="" aria-hidden="true"><span>Heard</span></span></button>
+            <button class="company" data-company="juno" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=junocompanion.com&amp;sz=64" alt="" aria-hidden="true"><span>Juno</span></span></button>
+            <button class="company" data-company="lex" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=lex.page&amp;sz=64" alt="" aria-hidden="true"><span>Lex</span></span></button>
+            <button class="company" data-company="limitless" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=limitless.ai&amp;sz=64" alt="" aria-hidden="true"><span>Limitless</span></span><small>Exited / Defunct</small></button>
+            <button class="company" data-company="meter" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=meter.com&amp;sz=64" alt="" aria-hidden="true"><span>Meter</span></span></button>
+            <button class="company" data-company="netlify" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=netlify.com&amp;sz=64" alt="" aria-hidden="true"><span>Netlify</span></span></button>
+            <button class="company" data-company="omella" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=omella.com&amp;sz=64" alt="" aria-hidden="true"><span>Omella</span></span></button>
+            <button class="company" data-company="reforge" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=reforge.com&amp;sz=64" alt="" aria-hidden="true"><span>Reforge</span></span><small>Exited</small></button>
+            <button class="company" data-company="browser" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=thebrowser.company&amp;sz=64" alt="" aria-hidden="true"><span>The Browser Company</span></span><small>Exited</small></button>
+            <button class="company" data-company="vori" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=vori.com&amp;sz=64" alt="" aria-hidden="true"><span>Vori</span></span></button>
+            <button class="company" data-company="writer" aria-pressed="false"><span class="company-label"><img src="https://www.google.com/s2/favicons?domain=writer.com&amp;sz=64" alt="" aria-hidden="true"><span>Writer</span></span></button>
+          </div>
+          <span class="scroll-cue" aria-hidden="true"></span>
+        </div>
+        <div class="company-card-stack" id="company-card-stack">
+          <article class="company-detail" aria-live="polite">
+            <div>
+              <div class="company-card-top">
+                <div class="detail-heading"><span class="company-mark"><img id="company-logo" src="https://www.google.com/s2/favicons?domain=compoundplanning.com&amp;sz=64" alt="" aria-hidden="true"><span id="company-mark">C</span></span><h3 id="company-name">Compound</h3></div>
+                <span class="pill" id="company-status" hidden>Active</span>
+              </div>
+              <p id="company-description">Compound is modern wealth management for founders, business owners, professionals, retirees, and families.</p>
+              <dl class="terminal-meta" id="company-meta">
+                <div><dt>company</dt><dd id="meta-company">compound</dd></div>
+                <div><dt>status</dt><dd id="meta-status">active</dd></div>
+                <div><dt>relation</dt><dd>direct investment</dd></div>
+                <div><dt>site</dt><dd><a id="company-link" href="https://compoundplanning.com/" target="_blank" rel="noopener">visit company ↗</a></dd></div>
+                <div id="meta-hiring-row"><dt>hiring</dt><dd id="meta-hiring"><a id="jobs-link" href="https://jobs.ashbyhq.com/compound" target="_blank" rel="noopener">check open roles ↗</a></dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Person",
-			"name": "Jared Erondu",
-			"url": "https://erondu.com",
-			"image": "https://erondu.com/assets/headshot@2x.jpg",
-			"sameAs": [
-				"https://twitter.com/erondu",
-				"https://www.linkedin.com/in/erondu",
-				"https://instagram.com/erondu",
-				"https://blog.erondu.com"
-			],
-			"jobTitle": "Head of Design",
-			"worksFor": {
-				"@type": "Organization",
-				"name": "Span",
-				"url": "https://span.app"
-			}
-		}
-		</script>
-	</head>
+    <section class="section" id="thoughts" data-section="Thoughts">
+      <div class="section-intro">
+        <p class="eyebrow section-path"><span>~/thoughts</span><kbd>4</kbd></p>
+        <h2>Ideas, conversations, and old internet.</h2>
+      </div>
+      <div class="archive-shell">
+        <div class="tabs" role="tablist" aria-label="Thought type">
+          <button role="tab" id="writing-tab" aria-selected="true" aria-controls="writing-panel">Writing <span>56</span></button>
+          <button role="tab" id="interviews-tab" aria-selected="false" aria-controls="interviews-panel">Interviews <span>12</span></button>
+        </div>
+        <div class="archive-panel" id="writing-panel" role="tabpanel" aria-labelledby="writing-tab">
+          <a class="archive-row" href="http://blog.erondu.com/go-home-ios-7-youre-drunk" target="_blank" rel="noopener"><span>Go Home iOS 7, You're Drunk.</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/we-are-the-blank-for-blank" target="_blank" rel="noopener"><span>We're the [blank] for [blank]</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/dont-mislead-your-users" target="_blank" rel="noopener"><span>Don't Mislead Your Users</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/brevity-in-design" target="_blank" rel="noopener"><span>Brevity in Design</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/typography-in-product-design" target="_blank" rel="noopener"><span>Typography in Product Design</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/if-emails-worked-like-urls" target="_blank" rel="noopener"><span>If Emails Worked Like URLs...</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/go-outside-and-do-nothing" target="_blank" rel="noopener"><span>Go Out and Do Nothing</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/you-are-your-number-one-user" target="_blank" rel="noopener"><span>You Are Your Number One User</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/wunderlist-2-is-great" target="_blank" rel="noopener"><span>Wunderlist 2 looks great</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/mailbox-app-rethinking-labels" target="_blank" rel="noopener"><span>Mailbox app: Rethinking labels</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/the-industry-turns-1-giveaway-time" target="_blank" rel="noopener"><span>The Industry Turns 1. Giveaway Time.</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/grim-reaper" target="_blank" rel="noopener"><span>Grim Reaper</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/dude-its-just-a-website" target="_blank" rel="noopener"><span>Dude, It's Just a Website</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/evomail" target="_blank" rel="noopener"><span>Evomail</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/manifesto" target="_blank" rel="noopener"><span>Manifesto</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/young-creatives" target="_blank" rel="noopener"><span>Young Creatives</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/apple-has-a-new-cook" target="_blank" rel="noopener"><span>Apple Has a New Cook</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/why-we-should-all-learn-to-code" target="_blank" rel="noopener"><span>Why We Should All Learn to Code</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/age-is-just-a-number-anyone-can-build" target="_blank" rel="noopener"><span>Age Is Just a Number. Anyone Can Build.</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/recommend-kippt-breaktime-offscreen" target="_blank" rel="noopener"><span>Recommend: Kippt, Breaktime, Offscreen</span><small>2016</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/apple-i-get-it" target="_blank" rel="noopener"><span>Apple, I Get It</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/iphone-event-confirmed-apple-cant-count" target="_blank" rel="noopener"><span>iPhone Event Confirmed. Apple Can't Count.</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/my-workspace" target="_blank" rel="noopener"><span>My Workspace</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/show-people-kindness" target="_blank" rel="noopener"><span>Show People Kindness</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/microsoft-resurgent" target="_blank" rel="noopener"><span>Microsoft Resurgent</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/microsofts-new-logo-insert-emotion-here" target="_blank" rel="noopener"><span>Microsoft's New Logo: Insert Emotion Here</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/there-is-value-in-charging" target="_blank" rel="noopener"><span>There Is Value in Charging</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/is-medium-mediocre" target="_blank" rel="noopener"><span>Is Medium Mediocre?</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/sparrows-acquisition" target="_blank" rel="noopener"><span>Sparrow's Acquisition</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/perpetual-design" target="_blank" rel="noopener"><span>Perpetual Design</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/samsung-series-9-living-a-lie" target="_blank" rel="noopener"><span>Samsung Series 9: Living a Lie</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/cheddar" target="_blank" rel="noopener"><span>Cheddar</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/carsonified-treehouse" target="_blank" rel="noopener"><span>Carsonified + Treehouse</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/flipboard-comes-to-android-another-ios-exclusive-makes-the-move" target="_blank" rel="noopener"><span>Flipboard Comes to Android: Another iOS Exclusive Makes the Move</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/10-dev-design-conferences-to-attend-in-2012" target="_blank" rel="noopener"><span>10 Dev/Design Conferences to Attend in 2012</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/todo-lists" target="_blank" rel="noopener"><span>Todo Lists</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/brydge-wants-to-make-your-ipad-a-laptop" target="_blank" rel="noopener"><span>Brydge Wants to Make Your iPad a Laptop</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/google-drive-and-dropbox" target="_blank" rel="noopener"><span>Google Drive and Dropbox</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/carpe-diem" target="_blank" rel="noopener"><span>Carpe Diem</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/i-dont-use-a-hard-drive" target="_blank" rel="noopener"><span>I Don't Use a Hard Drive</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/rip-dick-clark" target="_blank" rel="noopener"><span>RIP Dick Clark</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/mastering-the-unmasterable" target="_blank" rel="noopener"><span>Mastering the Unmasterable</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/the-notification-badge" target="_blank" rel="noopener"><span>The Notification Badge</span><small>2013</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/spotify" target="_blank" rel="noopener"><span>Spotify</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/google-redesign-and-the-white-space-dilemma" target="_blank" rel="noopener"><span>Google Redesign and the White Space Dilemma</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/apple-600-billion" target="_blank" rel="noopener"><span>Apple $600 Billion</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/instagram-and-facebook" target="_blank" rel="noopener"><span>Instagram and Facebook</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/google-glasses-a-new-way-to-hurt-yourself" target="_blank" rel="noopener"><span>Google Glasses: A New Way to Hurt Yourself</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/100-posts-later" target="_blank" rel="noopener"><span>100 Posts Later</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/the-industry-has-been-featured-in-pulse" target="_blank" rel="noopener"><span>The Industry Has Been Featured in Pulse</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/sparrow-now-supports-push-notification-sike" target="_blank" rel="noopener"><span>Sparrow Now Supports Push Notification. Sike.</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/steve-jobs-was" target="_blank" rel="noopener"><span>Steve Jobs Was</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/startups-take-note" target="_blank" rel="noopener"><span>Startups Take Note</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/ive-been-interviewing-a-lot" target="_blank" rel="noopener"><span>I've Been Interviewing a Lot</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/kony" target="_blank" rel="noopener"><span>Kony</span><small>2012</small></a>
+          <a class="archive-row" href="http://blog.erondu.com/well-hello-there-svbtle" target="_blank" rel="noopener"><span>Well Hello There, Svbtle</span><small>2013</small></a>
+          <button class="archive-more" id="writing-more-button" type="button">Show all writing ↓</button>
+        </div>
+        <div class="archive-panel" id="interviews-panel" role="tabpanel" aria-labelledby="interviews-tab" hidden>
+          <a class="archive-row" href="https://designbetterpodcast.com/p/portfolio-club-with-jared-erondu" target="_blank" rel="noopener"><span>Portfolio Club with Jared Erondu</span><small>Design Better · 2026</small></a>
+          <a class="archive-row" href="https://annieriley.substack.com/p/best-manager-ever-jared-erondu" target="_blank" rel="noopener"><span>Best Manager Ever: Jared Erondu — Hard Mode Leadership</span><small>Annie Riley · 2025</small></a>
+          <a class="archive-row" href="https://dumbquestions.co/jared-erondu/" target="_blank" rel="noopener"><span>Jared Erondu</span><small>Dumb Questions · Interview</small></a>
+          <a class="archive-row" href="https://review.firstround.com/the-ultimate-guide-to-the-founding-designer-role/" target="_blank" rel="noopener"><span>The Ultimate Guide to the Founding Designer Role</span><small>First Round Review · Guide</small></a>
+          <a class="archive-row" href="https://www.goabstract.com/blog/design-systems-abstract" target="_blank" rel="noopener"><span>Design systems &amp; Abstract</span><small>Abstract · 2017</small></a>
+          <a class="archive-row" href="https://www.figma.com/blog/can-designers-make-a-political-difference/" target="_blank" rel="noopener"><span>Can designers make a political difference?</span><small>Figma · 2017</small></a>
+          <a class="archive-row" href="https://dribbble.com/overtime/2017/07/25/episode-18-jared-erondu" target="_blank" rel="noopener"><span>Episode 18: Jared Erondu</span><small>Dribbble Overtime · 2017</small></a>
+          <a class="archive-row" href="https://techiesproject.com/jared-erondu/" target="_blank" rel="noopener"><span>Jared Erondu</span><small>Techies Project · 2016</small></a>
+          <a class="archive-row" href="https://freelance.tv/jarederondu/" target="_blank" rel="noopener"><span>Jared Erondu Interview</span><small>Freelance.tv · Video</small></a>
+          <a class="archive-row" href="https://contently.com/2012/08/06/the-industry-jared-erondu-on-why-design-and-opinion-are-the-future/" target="_blank" rel="noopener"><span>The Industry’s Erondu on Why Design and Opinion Are the Future</span><small>Contently · 2012</small></a>
+          <a class="archive-row" href="https://www.designmba.show/episodes/jared-erondu" target="_blank" rel="noopener"><span>Jared Erondu</span><small>Design MBA · Podcast</small></a>
+          <a class="archive-row" href="https://www.youtube.com/watch?v=jCwIvz3ezcA" target="_blank" rel="noopener"><span>Jared Erondu on YouTube</span><small>YouTube · Video</small></a>
+        </div>
+      </div>
+    </section>
 
-	<body>
-		<div id="page">
-			<header>
-				<img src="assets/erondu.png" alt="Erondu" id="logo" />
-				<h1>thinker, tinkerer.</h1>
-			</header>
+  </main>
 
-			<div id="left">
-				<div id="currently">
-					<h2>Currently</h2>
-					<ul>
-						<li>Head of Design, <a href="https://span.app" target="_blank" rel="noopener">Span</a>.</li>
-						<li>Startup Advisor &amp; Investor.</li>
-						<li>Occasional <a href="https://unsplash.com/erondu" target="_blank" rel="noopener">Faux-tographer</a>.</li>
-					</ul>
-				</div>
+  <nav class="dock" aria-label="Page sections">
+    <a href="#about" class="active">About <kbd>1</kbd></a>
+    <a href="#projects">Projects <kbd>2</kbd></a>
+    <a href="#investments">Investments <kbd>3</kbd></a>
+    <a href="#thoughts">Thoughts <kbd>4</kbd></a>
+  </nav>
 
-				<div id="previously">
-					<h2>Previously</h2>
-					<ul>
-						<li>SVP of Design &amp; Marketing, <a href="https://lattice.com" target="_blank" rel="noopener">Lattice</a>.</li>
-						<li>Director of Design, <a href="https://teespring.com" target="_blank" rel="noopener">Teespring</a>.</li>
-						<li>First designer, <a href="https://omadahealth.com" target="_blank" rel="noopener">Omada Health</a>.</li>
-						<li>Co-creator, <a href="https://askplaybook.com" target="_blank" rel="noopener">Playbook</a> &amp; <a href="https://highresolution.design" target="_blank" rel="noopener">High Resolution</a>.</li>
-						<li>Co-founder, <a href="https://twitter.com/industry" target="_blank" rel="noopener">The Industry</a> &amp; <a href="https://www.google.com/search?q=evomail" target="_blank" rel="noopener">Evomail</a>.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var themeToggle = document.getElementById('theme-toggle');
+      var themeMenu = document.getElementById('theme-menu');
+      var themeLabel = document.getElementById('theme-label');
+      var themeIcon = document.getElementById('theme-icon');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var themeLabels = {system:'Auto',light:'Light',dark:'Dark'};
+      var themeIcons = {system:'◐',light:'☼',dark:'☾'};
 
-		<div id="links">
-			<p><a href="https://blog.erondu.com" target="_blank" rel="noopener">Blog</a> &middot; <a href="https://instagram.com/erondu" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.linkedin.com/in/erondu" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://twitter.com/erondu" target="_blank" rel="noopener">Twitter</a> &middot; <button id="theme-toggle" aria-label="Toggle dark mode"></button>
-			</p>
-		</div>
+      function setupRevealMotion() {
+        var revealTargets = Array.prototype.slice.call(document.querySelectorAll([
+          '.hero-status',
+          '.hero h1',
+          '.bio-copy > p',
+          '.section-intro',
+          '.project-card',
+          '.investment-browser',
+          '.archive-shell'
+        ].join(',')));
+        revealTargets.forEach(function (element, index) {
+          element.dataset.revealIn = '';
+          var delay = element.classList.contains('project-card') ? Math.min(index % 2, 1) * 35 : Math.min(index % 4, 3) * 70;
+          element.style.setProperty('--reveal-delay', delay + 'ms');
+        });
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+          revealTargets.forEach(function (element) { element.classList.add('is-visible'); });
+          return;
+        }
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          });
+        }, {rootMargin:'0px 0px -12%',threshold:.12});
+        revealTargets.forEach(function (element) { revealObserver.observe(element); });
+      }
 
-		<script>
-			(function() {
-				var btn = document.getElementById('theme-toggle');
+      function setupTerminalType() {
+        var terminalLabels = Array.prototype.slice.call(document.querySelectorAll('.hero-status span,.section-path span'));
+        if (reduceMotion) {
+          document.querySelectorAll('.hero-status').forEach(function (status) { status.classList.add('terminal-done'); });
+          return;
+        }
+        terminalLabels.forEach(function (label) {
+          label.dataset.terminalText = label.textContent;
+          label.textContent = '';
+          label.classList.add('terminal-typing');
+        });
+        function typeLabel(label) {
+          if (label.dataset.typed === 'true') return;
+          label.dataset.typed = 'true';
+          var text = label.dataset.terminalText || '';
+          var index = 0;
+          function tick() {
+            label.textContent = text.slice(0, index);
+            index += 1;
+            if (index <= text.length) window.setTimeout(tick, 42 + Math.random() * 28);
+            else {
+              label.classList.remove('terminal-typing');
+              if (label.parentElement && label.parentElement.classList.contains('hero-status')) {
+                label.parentElement.classList.add('terminal-done');
+              }
+            }
+          }
+          tick();
+        }
+        if (!('IntersectionObserver' in window)) {
+          terminalLabels.forEach(typeLabel);
+          return;
+        }
+        var terminalObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            typeLabel(entry.target);
+            terminalObserver.unobserve(entry.target);
+          });
+        }, {rootMargin:'0px 0px -18%',threshold:.2});
+        terminalLabels.forEach(function (label) { terminalObserver.observe(label); });
+      }
 
-				function getEffectiveTheme() {
-					var saved = localStorage.getItem('theme');
-					if (saved) return saved;
-					return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-				}
+      setupRevealMotion();
+      setupTerminalType();
 
-				function applyTheme(theme) {
-					document.documentElement.setAttribute('data-theme', theme);
-					btn.textContent = theme === 'dark' ? '☀' : '☾';
-				}
+      function currentTheme() { return localStorage.getItem('theme') || 'system'; }
+      function applyTheme(theme) {
+        localStorage.setItem('theme', theme);
+        if (theme === 'system') delete root.dataset.theme;
+        else root.dataset.theme = theme;
+        themeLabel.textContent = themeLabels[theme] || 'Auto';
+        themeIcon.textContent = themeIcons[theme] || '◐';
+        document.querySelectorAll('[data-theme-choice]').forEach(function (choice) {
+          choice.setAttribute('aria-checked', String(choice.dataset.themeChoice === theme));
+        });
+      }
+      function closeThemeMenu() { themeMenu.hidden = true; themeToggle.setAttribute('aria-expanded', 'false'); }
+      applyTheme(currentTheme());
+      themeToggle.addEventListener('click', function () {
+        var opening = themeMenu.hidden;
+        themeMenu.hidden = !opening;
+        themeToggle.setAttribute('aria-expanded', String(opening));
+      });
+      document.querySelectorAll('[data-theme-choice]').forEach(function (choice) {
+        choice.addEventListener('click', function () { applyTheme(choice.dataset.themeChoice); closeThemeMenu(); });
+      });
+      document.addEventListener('click', function (event) { if (!event.target.closest('.theme-picker')) closeThemeMenu(); });
+      document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeThemeMenu(); });
 
-				applyTheme(getEffectiveTheme());
+      function updateClock() {
+        var time = new Intl.DateTimeFormat('en-GB', {timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date());
+        document.getElementById('local-time').textContent = 'NYC ' + time;
+      }
+      updateClock(); setInterval(updateClock, 1000);
 
-				btn.addEventListener('click', function() {
-					var next = getEffectiveTheme() === 'dark' ? 'light' : 'dark';
-					localStorage.setItem('theme', next);
-					applyTheme(next);
-				});
+      var monogram = document.querySelector('[data-scramble-logo]');
+      var monogramTimer;
+      function resetMonogram() {
+        clearInterval(monogramTimer);
+        if (monogram) monogram.textContent = 'e';
+      }
+      function scrambleMonogram() {
+        if (!monogram || reduceMotion) return;
+        var glyphs = ['3','ɘ','ë','€','E','e','∑','e'];
+        var index = 0;
+        clearInterval(monogramTimer);
+        monogram.classList.add('is-scrambling');
+        monogramTimer = setInterval(function () {
+          monogram.textContent = glyphs[index] || 'e';
+          index += 1;
+          if (index > glyphs.length) {
+            resetMonogram();
+            monogram.classList.remove('is-scrambling');
+          }
+        }, 42);
+      }
+      if (monogram) {
+        monogram.addEventListener('mouseenter', scrambleMonogram);
+        monogram.addEventListener('focus', scrambleMonogram);
+        monogram.addEventListener('mouseleave', function () {
+          resetMonogram();
+          monogram.classList.remove('is-scrambling');
+        });
+        monogram.addEventListener('blur', function () {
+          resetMonogram();
+          monogram.classList.remove('is-scrambling');
+        });
+      }
 
-				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
-					if (!localStorage.getItem('theme')) applyTheme(getEffectiveTheme());
-				});
-			})();
-		</script>
-	</body>
+      function closeNestedReveals(copy) {
+        copy.querySelectorAll('.inline-reveal').forEach(function (childButton) { childButton.setAttribute('aria-expanded', 'false'); });
+        copy.querySelectorAll('.bio-expansion').forEach(function (childCopy) {
+          if (childCopy.getAnimations) childCopy.getAnimations().forEach(function (animation) { animation.cancel(); });
+          childCopy.hidden = true;
+        });
+      }
+      document.addEventListener('click', function (event) {
+        var button = event.target.closest('.inline-reveal');
+        if (!button) return;
+        var copy = document.getElementById(button.dataset.reveal);
+        if (!copy) return;
+        var opening = copy.hidden;
+        button.setAttribute('aria-expanded', String(opening));
+        copy.hidden = !opening;
+        if (!opening) {
+          closeNestedReveals(copy);
+        }
+      });
+
+      var companies = {
+        compound:{name:'Compound',mark:'C',status:'Active',domain:'compoundplanning.com',url:'https://compoundplanning.com/',jobsUrl:'https://jobs.ashbyhq.com/compound',description:'Compound is modern wealth management for founders, business owners, professionals, retirees, and families.'},
+        daisie:{name:'Daisie',mark:'D',status:'Active',domain:'daisie.com',url:'https://www.daisie.com/',description:'Daisie is a creative learning platform for creators and artists to build skills through online classes and community.'},
+        diagram:{name:'Diagram',mark:'D',status:'Exited / Defunct',domain:'diagram.com',url:'https://diagram.com/',description:'Diagram built AI-powered design tools for generating, automating, and iterating inside creative workflows.'},
+        dock:{name:'Dock',mark:'D',status:'Active',domain:'dock.us',url:'https://www.dock.us/',description:'Dock is an AI revenue enablement platform for deal rooms, onboarding, content, and customer collaboration.'},
+        dupe:{name:'Dupe',mark:'D',status:'Active',domain:'dupe.com',url:'https://dupe.com/',description:'Dupe helps shoppers find lower-cost lookalikes across furniture, fashion, and other products.'},
+        every:{name:'Every',mark:'E',status:'Active',domain:'every.to',url:'https://every.to/',jobsUrl:'https://every.to/careers',description:'Every is an AI-native media, software, and consulting company publishing ideas and building products for people working at the edge of AI.'},
+        gradual:{name:'Gradual',mark:'G',status:'Active',domain:'gradual.com',url:'https://gradual.com/',description:'Gradual is a branded community platform for hosting events, publishing content, educating members, and growing community-led brands.'},
+        heard:{name:'Heard',mark:'H',status:'Active',domain:'joinheard.com',url:'https://www.joinheard.com/',jobsUrl:'https://jobs.lever.co/heard',description:'Heard is a financial platform for therapists and wellness practitioners, combining bookkeeping, taxes, payroll, banking, and human support.'},
+        juno:{name:'Juno',mark:'J',status:'Active',domain:'junocompanion.com',url:'https://junocompanion.com/',description:'Juno is an AI health assistant for people with chronic illness, helping them track symptoms, find patterns, and prepare for doctor visits.'},
+        lex:{name:'Lex',mark:'L',status:'Active',domain:'lex.page',url:'https://lex.page/',description:'Lex is a collaborative writing app with AI editing tools for drafting, feedback, rewriting, and publishing.'},
+        limitless:{name:'Limitless',mark:'L',status:'Exited / Defunct',domain:'limitless.ai',url:'https://www.limitless.ai/',description:'Limitless built AI wearable and memory tools; after its acquisition by Meta, it is supporting existing Pendant customers while winding down new sales.'},
+        meter:{name:'Meter',mark:'M',status:'Active',domain:'meter.com',url:'https://meter.com/',jobsUrl:'https://www.meter.com/careers',description:'Meter builds enterprise network infrastructure across hardware, software, installation, and support.'},
+        netlify:{name:'Netlify',mark:'N',status:'Active',domain:'netlify.com',url:'https://www.netlify.com/',jobsUrl:'https://www.netlify.com/careers/',description:'Netlify is a platform for building and deploying web apps from code or AI to global production infrastructure.'},
+        omella:{name:'Omella',mark:'O',status:'Active',domain:'omella.com',url:'https://omella.com/',description:'Omella helps K–12 schools and organizations collect payments, forms, tickets, and donations without platform fees.'},
+        reforge:{name:'Reforge',mark:'R',status:'Exited',domain:'reforge.com',url:'https://reforge.com/',description:'Reforge teaches product, growth, and AI teams through courses and guides from experienced operators.'},
+        browser:{name:'The Browser Company',mark:'B',status:'Exited',domain:'thebrowser.company',url:'https://www.thebrowser.company/',jobsUrl:'https://www.thebrowser.company/careers',description:'The Browser Company builds browsers and tools like Dia and Arc for better ways to use the internet.'},
+        vori:{name:'Vori',mark:'V',status:'Active',domain:'vori.com',url:'https://vori.com/',jobsUrl:'https://www.vori.com/careers',description:'Vori is a connected grocery POS and operations platform for independent grocers, covering checkout, ordering, pricing, inventory, loyalty, and reporting.'},
+        writer:{name:'Writer',mark:'W',status:'Active',domain:'writer.com',url:'https://writer.com/',jobsUrl:'https://writer.com/company/careers/',description:'WRITER is an enterprise AI platform for building agentic workflows grounded in a company’s brand, knowledge, and tools.'}
+      };
+      var companyStack = document.getElementById('company-card-stack');
+      var companyLeaveTimer;
+      var companySwapTimer;
+      function faviconUrl(domain) {
+        return 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(domain) + '&sz=64';
+      }
+      function updateCompanyDetail(data) {
+        var logo = document.getElementById('company-logo');
+        var link = document.getElementById('company-link');
+        var statusBadge = document.getElementById('company-status');
+        var meta = document.getElementById('company-meta');
+        var hiringRow = document.getElementById('meta-hiring-row');
+        var jobsLink = document.getElementById('jobs-link');
+        document.getElementById('company-name').textContent = data.name;
+        document.getElementById('company-mark').textContent = data.mark;
+        statusBadge.textContent = data.status;
+        statusBadge.hidden = data.status === 'Active';
+        document.getElementById('company-description').textContent = data.description;
+        document.getElementById('meta-company').textContent = data.name.toLowerCase();
+        document.getElementById('meta-status').textContent = data.status.toLowerCase();
+        var isDefunct = data.status.toLowerCase().indexOf('defunct') > -1;
+        var showHiring = Boolean(data.jobsUrl && !isDefunct);
+        if (hiringRow) hiringRow.hidden = !showHiring;
+        if (meta) meta.classList.toggle('no-hiring', !showHiring);
+        logo.hidden = false;
+        logo.src = faviconUrl(data.domain);
+        logo.onerror = function () { logo.hidden = true; };
+        if (link) link.href = data.url;
+        if (jobsLink) jobsLink.href = data.jobsUrl || '#';
+      }
+      document.querySelectorAll('.company-label img').forEach(function (image) {
+        image.onerror = function () { image.hidden = true; };
+      });
+      updateCompanyDetail(companies.compound);
+      function animateCompanyCard(data) {
+        if (!companyStack || reduceMotion) { updateCompanyDetail(data); return; }
+        clearTimeout(companyLeaveTimer);
+        clearTimeout(companySwapTimer);
+        companyStack.classList.remove('swapping','leaving','previewing');
+        void companyStack.offsetWidth;
+        companyStack.classList.add('leaving');
+        companyLeaveTimer = setTimeout(function () {
+          updateCompanyDetail(data);
+          companyStack.classList.remove('leaving');
+          void companyStack.offsetWidth;
+          companyStack.classList.add('swapping');
+        }, 160);
+        companySwapTimer = setTimeout(function () { companyStack.classList.remove('swapping'); }, 860);
+      }
+      document.querySelectorAll('.company').forEach(function (button) {
+        button.addEventListener('click', function () {
+          if (button.classList.contains('active')) return;
+          document.querySelectorAll('.company').forEach(function (item) { item.classList.remove('active'); item.setAttribute('aria-pressed','false'); });
+          button.classList.add('active'); button.setAttribute('aria-pressed','true');
+          var data = companies[button.dataset.company];
+          animateCompanyCard(data);
+        });
+        button.addEventListener('mouseenter', function () {
+          if (companyStack && !button.classList.contains('active')) companyStack.classList.add('previewing');
+        });
+        button.addEventListener('mouseleave', function () {
+          if (companyStack) companyStack.classList.remove('previewing');
+        });
+      });
+      var companyList = document.querySelector('.company-list');
+      var scrollCue = document.querySelector('.scroll-cue');
+      function updateScrollCue() {
+        if (!companyList || !scrollCue) return;
+        var atBottom = companyList.scrollTop + companyList.clientHeight >= companyList.scrollHeight - 2;
+        var canScroll = companyList.scrollHeight > companyList.clientHeight + 2;
+        scrollCue.classList.toggle('is-hidden', !canScroll || atBottom);
+      }
+      if (companyList && scrollCue) {
+        updateScrollCue();
+        companyList.addEventListener('scroll', updateScrollCue, {passive:true});
+        window.addEventListener('resize', updateScrollCue);
+      }
+
+      document.querySelectorAll('[role="tab"]').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          document.querySelectorAll('[role="tab"]').forEach(function (item) {
+            var selected = item === tab;
+            item.setAttribute('aria-selected', selected);
+            document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
+          });
+        });
+      });
+      var writingRows = Array.prototype.slice.call(document.querySelectorAll('#writing-panel .archive-row'));
+      var writingMoreButton = document.getElementById('writing-more-button');
+      writingRows.forEach(function (row, index) { if (index >= 20) row.hidden = true; });
+      if (writingMoreButton) {
+        writingMoreButton.addEventListener('click', function () {
+          var opening = writingRows.some(function (row, index) { return index >= 20 && row.hidden; });
+          writingRows.forEach(function (row, index) { if (index >= 20) row.hidden = !opening; });
+          writingMoreButton.textContent = opening ? 'Show fewer ↑' : 'Show all writing ↓';
+        });
+      }
+
+      var dockLinks = document.querySelectorAll('.dock a');
+      var dockScrollLock = false;
+      var dockScrollLockTimer;
+      function releaseDockScrollLock() {
+        dockScrollLock = false;
+        clearTimeout(dockScrollLockTimer);
+        window.removeEventListener('scrollend', releaseDockScrollLock);
+      }
+      dockLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          var selector = link.getAttribute('href');
+          var targetSection = document.querySelector(selector);
+          if (!targetSection) return;
+          event.preventDefault();
+          dockScrollLock = true;
+          clearTimeout(dockScrollLockTimer);
+          dockLinks.forEach(function (item) { item.classList.toggle('active', item === link); });
+          targetSection.scrollIntoView({block:'start'});
+          window.addEventListener('scrollend', releaseDockScrollLock, {once:true});
+          dockScrollLockTimer = setTimeout(releaseDockScrollLock, 1100);
+          if (history.replaceState) history.replaceState(null, '', selector);
+        });
+      });
+      document.addEventListener('keydown', function (event) {
+        var target = event.target;
+        var isTyping = /INPUT|TEXTAREA|SELECT/.test(target.tagName) || target.isContentEditable;
+        if (!isTyping && /^[1-4]$/.test(event.key)) { var link = dockLinks[Number(event.key)-1]; if (link) link.click(); }
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        if (dockScrollLock) return;
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          dockLinks.forEach(function (link) { link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id); });
+        });
+      }, {rootMargin:'-35% 0px -55%',threshold:0});
+      document.querySelectorAll('[data-section]').forEach(function (section) { observer.observe(section); });
+    }());
+  </script>
+</body>
 </html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    :root { color-scheme: light dark; }
+    rect { fill: #f7f6f2; }
+    text { fill: #151614; font-family: Arial Black, Arial, Helvetica, sans-serif; font-size: 58px; font-weight: 900; letter-spacing: -0.12em; }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #151613; }
+      text { fill: #f5f4ef; }
+    }
+  </style>
+  <rect width="64" height="64" rx="14"/>
+  <text x="30" y="50" text-anchor="middle">e</text>
+</svg>
