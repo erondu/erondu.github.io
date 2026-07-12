@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Page Not Found - Jared Erondu</title>
+		<title>Page Not Found — Jared Erondu</title>
+		<meta name="robots" content="noindex">
 		<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 		<link href="css/erondu.css" rel="stylesheet">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-6L92N8Q9PF"></script>
@@ -15,25 +16,43 @@
 		</script>
 		<script>
 			(function() {
+				document.documentElement.classList.add('js');
 				var saved = localStorage.getItem('theme');
-				if (saved) document.documentElement.setAttribute('data-theme', saved);
+				if (saved && saved !== 'system') document.documentElement.setAttribute('data-theme', saved);
 			})();
 		</script>
 	</head>
-	<body>
-		<div id="page">
-			<header>
-				<img src="assets/erondu.png" alt="Erondu" id="logo" />
-				<h1>page not found.</h1>
-			</header>
-			<div id="left">
-				<div id="currently">
-					<h2>Lost?</h2>
-					<ul>
-						<li><a href="/">Head back home</a>.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+	<body class="error-page">
+		<main class="error-content">
+			<h1 class="error-line"><span>Looks like a 404. This page wasn't found.</span></h1>
+			<a class="error-home" href="/">Return home</a>
+		</main>
+		<script>
+			(function () {
+				var line = document.querySelector('.error-line span');
+				var home = document.querySelector('.error-home');
+				var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				if (!line || !home || reduceMotion) {
+					document.body.classList.add('error-complete');
+					return;
+				}
+				var text = line.textContent;
+				var index = 0;
+				line.textContent = '';
+				line.classList.add('terminal-typing');
+				function type() {
+					line.textContent = text.slice(0, index);
+					index += 1;
+					if (index <= text.length) {
+						window.setTimeout(type, 42 + Math.random() * 28);
+					} else {
+						window.setTimeout(function () {
+							document.body.classList.add('error-complete');
+						}, 280);
+					}
+				}
+				window.setTimeout(type, 180);
+			})();
+		</script>
 	</body>
 </html>
