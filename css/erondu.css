@@ -73,7 +73,7 @@ h1{max-width:900px;font-size:clamp(44px,5.5vw,76px);line-height:.98;letter-spaci
 h2{font-size:clamp(38px,5vw,64px);line-height:1.02;letter-spacing:-.05em;font-weight:500;margin:0 0 18px}
 .section-intro>p:last-child{font-size:18px;line-height:1.55;color:var(--muted);margin:0}
 
-.investment-browser{display:grid;grid-template-columns:minmax(250px,.72fr) 1.45fr;gap:38px;min-height:480px;align-items:start}
+.investment-browser{display:grid;grid-template-columns:minmax(250px,.72fr) 1.45fr;gap:38px;min-height:0;align-items:start}
 .company-list-wrap{position:relative;height:298px;overflow:hidden}
 .company-list-wrap:before,.company-list-wrap:after{content:"";position:absolute;z-index:2;left:0;right:0;height:42px;pointer-events:none}
 .company-list-wrap:before{top:0;background:linear-gradient(var(--bg),color-mix(in srgb,var(--bg) 0%,transparent))}
