@@ -73,12 +73,12 @@
     <div class="utility-actions">
       <div class="theme-picker">
         <button class="theme-toggle" id="theme-toggle" aria-label="Choose color theme" aria-haspopup="menu" aria-expanded="false">
-          <span class="theme-icon" id="theme-icon" aria-hidden="true">◐</span><span id="theme-label">Auto</span><svg class="chevron" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <span class="theme-icon" id="theme-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></span><span id="theme-label">System</span><svg class="chevron" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="theme-menu" id="theme-menu" role="menu" hidden>
-          <button role="menuitemradio" data-theme-choice="system" aria-checked="true">Auto<span>◐</span></button>
-          <button role="menuitemradio" data-theme-choice="light" aria-checked="false">Light<span>☼</span></button>
-          <button role="menuitemradio" data-theme-choice="dark" aria-checked="false">Dark<span>☾</span></button>
+          <button role="menuitemradio" data-theme-choice="system" aria-checked="true"><span class="theme-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></span><span class="theme-menu-label">System</span></button>
+          <button role="menuitemradio" data-theme-choice="light" aria-checked="false"><span class="theme-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></span><span class="theme-menu-label">Light</span></button>
+          <button role="menuitemradio" data-theme-choice="dark" aria-checked="false"><span class="theme-menu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></span><span class="theme-menu-label">Dark</span></button>
         </div>
       </div>
       <span class="local-time" id="local-time">NYC --:--:--</span>
@@ -332,8 +332,13 @@
       var themeLabel = document.getElementById('theme-label');
       var themeIcon = document.getElementById('theme-icon');
       var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var themeLabels = {system:'Auto',light:'Light',dark:'Dark'};
-      var themeIcons = {system:'◐',light:'☼',dark:'☾'};
+      var themeMenuCloseTimer;
+      var themeMenuOpenFrame;
+      var themeLabels = {system:'System',light:'Light',dark:'Dark'};
+      var themeIcons = {};
+      document.querySelectorAll('[data-theme-choice]').forEach(function (choice) {
+        themeIcons[choice.dataset.themeChoice] = choice.querySelector('.theme-menu-icon').innerHTML;
+      });
 
       function setupRevealMotion() {
         var revealTargets = Array.prototype.slice.call(document.querySelectorAll([
@@ -415,18 +420,33 @@
         localStorage.setItem('theme', theme);
         if (theme === 'system') delete root.dataset.theme;
         else root.dataset.theme = theme;
-        themeLabel.textContent = themeLabels[theme] || 'Auto';
-        themeIcon.textContent = themeIcons[theme] || '◐';
+        themeLabel.textContent = themeLabels[theme] || 'System';
+        themeIcon.innerHTML = themeIcons[theme] || themeIcons.system;
         document.querySelectorAll('[data-theme-choice]').forEach(function (choice) {
           choice.setAttribute('aria-checked', String(choice.dataset.themeChoice === theme));
         });
       }
-      function closeThemeMenu() { themeMenu.hidden = true; themeToggle.setAttribute('aria-expanded', 'false'); }
+      function openThemeMenu() {
+        window.clearTimeout(themeMenuCloseTimer);
+        window.cancelAnimationFrame(themeMenuOpenFrame);
+        themeMenu.hidden = false;
+        themeMenu.setAttribute('aria-hidden', 'false');
+        themeToggle.setAttribute('aria-expanded', 'true');
+        themeMenuOpenFrame = window.requestAnimationFrame(function () { themeMenu.classList.add('is-open'); });
+      }
+      function closeThemeMenu() {
+        window.clearTimeout(themeMenuCloseTimer);
+        window.cancelAnimationFrame(themeMenuOpenFrame);
+        themeMenu.classList.remove('is-open');
+        themeMenu.setAttribute('aria-hidden', 'true');
+        themeToggle.setAttribute('aria-expanded', 'false');
+        if (reduceMotion) themeMenu.hidden = true;
+        else themeMenuCloseTimer = window.setTimeout(function () { themeMenu.hidden = true; }, 100);
+      }
       applyTheme(currentTheme());
       themeToggle.addEventListener('click', function () {
-        var opening = themeMenu.hidden;
-        themeMenu.hidden = !opening;
-        themeToggle.setAttribute('aria-expanded', String(opening));
+        if (themeToggle.getAttribute('aria-expanded') !== 'true') openThemeMenu();
+        else closeThemeMenu();
       });
       document.querySelectorAll('[data-theme-choice]').forEach(function (choice) {
         choice.addEventListener('click', function () { applyTheme(choice.dataset.themeChoice); closeThemeMenu(); });

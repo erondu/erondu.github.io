@@ -37,10 +37,12 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .theme-picker{position:relative}
 .theme-toggle{padding:0;border:0;background:none;display:flex;align-items:center;gap:6px;cursor:pointer;font-size:12px;color:var(--muted)}
 .theme-toggle:hover{color:var(--text)}.chevron{display:block}
-.theme-icon{width:14px;height:14px;display:grid;place-items:center;color:var(--text);font-size:13px;line-height:1}
-.theme-menu{position:absolute;z-index:30;right:0;top:27px;width:140px;padding:5px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-.theme-menu button{width:100%;border:0;background:transparent;padding:8px 9px;border-radius:8px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px;cursor:pointer}
-.theme-menu button:hover{background:var(--surface-2);color:var(--text)}.theme-menu button[aria-checked="true"]{color:var(--text);font-weight:600}.theme-menu button span{opacity:.55;font-weight:400}
+.theme-icon{width:14px;height:14px;display:grid;place-items:center;color:var(--text);line-height:1}.theme-icon svg{width:14px;height:14px;display:block}
+.theme-menu{position:absolute;z-index:30;right:0;top:27px;width:140px;padding:5px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.05);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity 100ms ease-out,transform 100ms ease-out,visibility 0s linear 100ms}
+.theme-menu[hidden]{display:block}.theme-menu.is-open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition-delay:0s}
+.theme-menu button{width:100%;border:0;background:transparent;padding:8px 9px;border-radius:8px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;cursor:pointer;transition:background-color 100ms ease,color 100ms ease}
+.theme-menu button:hover{background:var(--surface-2);color:var(--text)}.theme-menu button[aria-checked="true"]{color:var(--text);font-weight:600}.theme-menu-icon{width:16px;height:16px;display:grid;place-items:center;opacity:.7;font-weight:400}.theme-menu-icon svg{width:16px;height:16px;display:block}.theme-menu button[aria-checked="true"] .theme-menu-icon{opacity:1}.theme-menu-label{font-weight:inherit}
+@media(prefers-reduced-motion:reduce){.theme-menu{transition:none;transform:none}}
 
 main{max-width:1120px;margin:0 auto;padding:0 38px}
 .section{min-height:auto;padding:clamp(64px,7vw,92px) 0;display:flex;flex-direction:column;justify-content:flex-start}
