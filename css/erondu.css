@@ -2,10 +2,10 @@
 @font-face{font-family:Roobert;src:url('../type/Roobert-Medium.ttf') format('truetype');font-weight:500}
 @font-face{font-family:Roobert;src:url('../type/Roobert-SemiBold.ttf') format('truetype');font-weight:600}
 
-:root{--bg:#f7f6f2;--surface:#fff;--surface-2:#efeee9;--text:#1d1e1b;--tertiary:#898a84;--muted:#6e7069;--line:#dbdad4;--accent:#ef5c42;--inverse:#151614;--inverse-text:#f5f4ef;--shadow:0 16px 48px rgba(26,27,24,.1);color-scheme:light}
-@media(prefers-color-scheme:dark){:root{--bg:#151613;--surface:#1d1e1b;--surface-2:#262722;--text:#f0efe9;--tertiary:#777970;--muted:#989a91;--line:#343530;--inverse:#efeee8;--inverse-text:#171815;--shadow:0 18px 55px rgba(0,0,0,.26);color-scheme:dark}}
-[data-theme="light"]{--bg:#f7f6f2;--surface:#fff;--surface-2:#efeee9;--text:#1d1e1b;--tertiary:#898a84;--muted:#6e7069;--line:#dbdad4;--accent:#ef5c42;--inverse:#151614;--inverse-text:#f5f4ef;--shadow:0 16px 48px rgba(26,27,24,.1);color-scheme:light}
-[data-theme="dark"]{--bg:#151613;--surface:#1d1e1b;--surface-2:#262722;--text:#f0efe9;--tertiary:#777970;--muted:#989a91;--line:#343530;--accent:#ff7259;--inverse:#efeee8;--inverse-text:#171815;--shadow:0 18px 55px rgba(0,0,0,.26);color-scheme:dark}
+:root{--bg:#f7f6f2;--surface:#fff;--surface-2:#efeee9;--text:#1d1e1b;--tertiary:#898a84;--muted:#6e7069;--line:#dbdad4;--accent:#ef5c42;--inverse:#151614;--inverse-text:#f5f4ef;--shadow:0 16px 48px rgba(26,27,24,.1);--kbd-border-bottom:color-mix(in srgb,var(--line) 55%,var(--text));--kbd-shadow:0 1px 0 var(--line);color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#151613;--surface:#1d1e1b;--surface-2:#262722;--text:#f0efe9;--tertiary:#777970;--muted:#989a91;--line:#343530;--inverse:#efeee8;--inverse-text:#171815;--shadow:0 18px 55px rgba(0,0,0,.26);--kbd-border-bottom:var(--line);--kbd-shadow:none;color-scheme:dark}}
+[data-theme="light"]{--bg:#f7f6f2;--surface:#fff;--surface-2:#efeee9;--text:#1d1e1b;--tertiary:#898a84;--muted:#6e7069;--line:#dbdad4;--accent:#ef5c42;--inverse:#151614;--inverse-text:#f5f4ef;--shadow:0 16px 48px rgba(26,27,24,.1);--kbd-border-bottom:color-mix(in srgb,var(--line) 55%,var(--text));--kbd-shadow:0 1px 0 var(--line);color-scheme:light}
+[data-theme="dark"]{--bg:#151613;--surface:#1d1e1b;--surface-2:#262722;--text:#f0efe9;--tertiary:#777970;--muted:#989a91;--line:#343530;--accent:#ff7259;--inverse:#efeee8;--inverse-text:#171815;--shadow:0 18px 55px rgba(0,0,0,.26);--kbd-border-bottom:var(--line);--kbd-shadow:none;color-scheme:dark}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -50,7 +50,7 @@ main{max-width:1120px;margin:0 auto;padding:0 38px}
 .hero-status:before{content:"$";color:var(--accent)}
 .hero-status span{color:var(--text)}
 .hero-status i{display:inline-block;width:6px;height:12px;background:var(--accent);opacity:0}.hero-status.terminal-done i{opacity:1;animation:terminalBlink 1s steps(1) infinite}
-.section-path{display:flex;align-items:center;gap:9px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:none;letter-spacing:.02em}.section-path kbd,.dock kbd{min-width:18px;height:18px;padding:0 4px;border:1px solid var(--line);border-bottom-color:color-mix(in srgb,var(--line) 55%,var(--text));border-radius:4px;background:var(--surface);display:inline-grid;place-items:center;font:9px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);box-shadow:0 1px 0 var(--line)}
+.section-path{display:flex;align-items:center;gap:9px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:none;letter-spacing:.02em}.section-path kbd,.dock kbd{min-width:18px;height:18px;padding:0 4px;border:1px solid var(--line);border-bottom-color:var(--kbd-border-bottom);border-radius:4px;background:var(--surface);display:inline-grid;place-items:center;font:9px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);box-shadow:var(--kbd-shadow)}
 h1{max-width:900px;font-size:clamp(44px,5.5vw,76px);line-height:.98;letter-spacing:-.06em;font-weight:500;margin:0 0 42px}
 .bio-copy{position:relative;max-width:920px;font-size:clamp(18px,2vw,22px);line-height:1.55;color:color-mix(in srgb,var(--text) 82%,var(--muted))}
 .bio-copy p{margin:0}
