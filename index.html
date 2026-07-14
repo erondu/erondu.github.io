@@ -103,7 +103,7 @@
           Across all of this, I’ve come to value <button class="inline-reveal" data-reveal="craft-detail" aria-expanded="false">craft</button><span data-collapsed-for="craft-detail">, </span><span class="bio-expansion" id="craft-detail" hidden>. I believe the natural gravitational pull of most work is toward mediocrity. Good work requires active resistance: higher standards, sharper taste, clearer communication, and more care than the average system asks of us. I’ve also come to value </span><button class="inline-reveal" data-reveal="judgment-detail" aria-expanded="false">judgment</button><span data-collapsed-for="judgment-detail">, and </span><span class="bio-expansion" id="judgment-detail" hidden>. Judgment must be grounded in a deep understanding of people. Customers reveal problems more often than solutions; great product work still requires a point of view, conviction, and instinct—especially in an increasingly AI-augmented world. I also value </span><button class="inline-reveal" data-reveal="business-detail" aria-expanded="false">business outcomes</button><span class="bio-expansion" id="business-detail" hidden>. The best product designers are business thinkers. They seek enough signal to recognize opportunities others miss and understand that craft and judgment matter most when they produce meaningful results</span>.
         </p>
         <p>
-          Beyond operating roles, I do <button class="inline-reveal" data-reveal="advisor-detail" aria-expanded="false">advisory &amp; consulting work</button><span data-collapsed-for="advisor-detail">, and </span><span class="bio-expansion" id="advisor-detail" hidden> focused on product strategy, design, and building strong creative functions. That work has included <a class="bio-link" href="https://www.ycombinator.com/" target="_blank" rel="noopener">Y Combinator</a>, <button class="inline-reveal inline-more" data-reveal="mit-more" aria-expanded="false">MIT Media Lab</button><span class="bio-expansion" id="mit-more" hidden>, where I worked with <a class="bio-link" href="https://www.linkedin.com/in/deb-roy-662a644/" target="_blank" rel="noopener">Deb Roy</a>, <a class="bio-link" href="https://x.com/elleluna" target="_blank" rel="noopener">Elle Luna</a>, and <a class="bio-link" href="https://x.com/raphaelschaad" target="_blank" rel="noopener">Raphael Schaad</a> on an operating system for inexpensive Android devices designed to help women in a small Indian village connect with one another</span>, <a class="bio-link" href="https://ironcladapp.com/" target="_blank" rel="noopener">Ironclad</a>, <a class="bio-link" href="https://www.owner.com/" target="_blank" rel="noopener">Owner</a>, <a class="bio-link" href="https://front.com/" target="_blank" rel="noopener">Front</a>, <a class="bio-link" href="https://designerfund.com/" target="_blank" rel="noopener">Designer Fund</a>, <a class="bio-link" href="https://greylock.com/" target="_blank" rel="noopener">Greylock Partners</a>, and others. I also </span><button class="inline-reveal" data-reveal="founders-detail" aria-expanded="false">invest in builders</button><span class="bio-expansion" id="founders-detail" hidden> who are relentless, deeply obsessed with product, and unusually clear about “why now?” and “why them?”</span>. You can reach me via <a class="bio-link" href="mailto:jared@erondu.com">email</a> or book time with me <a class="bio-link" href="https://intro.co/jarederondu?source=jared_website" target="_blank" rel="noopener">on Intro</a>.
+          Beyond operating roles, I do <button class="inline-reveal" data-reveal="advisor-detail" aria-expanded="false">advisory &amp; consulting work</button><span data-collapsed-for="advisor-detail">, and </span><span class="bio-expansion" id="advisor-detail" hidden> focused on product strategy, design, and building strong creative functions. That work has included <a class="bio-link" href="https://www.ycombinator.com/" target="_blank" rel="noopener">Y Combinator</a>, <button class="inline-reveal inline-more" data-reveal="mit-more" aria-expanded="false">MIT Media Lab</button><span class="bio-expansion" id="mit-more" hidden>, where I worked with <a class="bio-link" href="https://www.linkedin.com/in/deb-roy-662a644/" target="_blank" rel="noopener">Deb Roy</a>, <a class="bio-link" href="https://x.com/elleluna" target="_blank" rel="noopener">Elle Luna</a>, and <a class="bio-link" href="https://x.com/raphaelschaad" target="_blank" rel="noopener">Raphael Schaad</a> on an operating system for inexpensive Android devices designed to help women in a small Indian village connect with one another</span>, <a class="bio-link" href="https://ironcladapp.com/" target="_blank" rel="noopener">Ironclad</a>, <a class="bio-link" href="https://www.owner.com/" target="_blank" rel="noopener">Owner</a>, <a class="bio-link" href="https://front.com/" target="_blank" rel="noopener">Front</a>, <a class="bio-link" href="https://designerfund.com/" target="_blank" rel="noopener">Designer Fund</a>, <a class="bio-link" href="https://greylock.com/" target="_blank" rel="noopener">Greylock Partners</a>, and others. I also </span><button class="inline-reveal" data-reveal="founders-detail" aria-expanded="false">invest in builders</button><span class="bio-expansion" id="founders-detail" hidden> who are relentless, deeply obsessed with product, and unusually clear about “why now?” and “why them?”</span>. You can reach me via <a class="bio-link email-copy" href="mailto:jared@erondu.com" data-copy-email><span class="email-copy-label">email</span><span class="email-copy-feedback" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" focusable="false"><path d="m3 8 3 3 7-7"/></svg> copied to clipboard</span><span class="visually-hidden" data-copy-status aria-live="polite"></span></a> or book time with me <a class="bio-link" href="https://intro.co/jarederondu?source=jared_website" target="_blank" rel="noopener">on Intro</a>.
         </p>
       </div>
 
@@ -495,6 +495,66 @@
       }
 
       document.querySelectorAll('.bio-copy > p').forEach(wrapBioLayoutWords);
+
+      var emailCopy = document.querySelector('[data-copy-email]');
+      if (emailCopy) {
+        var emailCopyLabel = emailCopy.querySelector('.email-copy-label');
+        var emailCopyFeedback = emailCopy.querySelector('.email-copy-feedback');
+        var emailCopyStatus = emailCopy.querySelector('[data-copy-status]');
+        var emailCopyTimer;
+
+        function sizeEmailCopy(useFeedback) {
+          var visibleCopy = useFeedback ? emailCopyFeedback : emailCopyLabel;
+          emailCopy.style.setProperty('--email-copy-width', Math.ceil(visibleCopy.getBoundingClientRect().width) + 'px');
+        }
+
+        function copyEmailFallback(email) {
+          return new Promise(function (resolve, reject) {
+            var field = document.createElement('textarea');
+            field.value = email;
+            field.setAttribute('readonly', '');
+            field.style.position = 'fixed';
+            field.style.opacity = '0';
+            document.body.appendChild(field);
+            field.select();
+            try {
+              if (document.execCommand('copy')) resolve();
+              else reject(new Error('Copy failed'));
+            } catch (error) {
+              reject(error);
+            } finally {
+              field.remove();
+            }
+          });
+        }
+
+        function copyEmailAddress(email) {
+          if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(email).catch(function () { return copyEmailFallback(email); });
+          }
+          return copyEmailFallback(email);
+        }
+
+        sizeEmailCopy(false);
+        window.addEventListener('resize', function () { sizeEmailCopy(emailCopy.classList.contains('is-copied')); });
+        emailCopy.addEventListener('click', function (event) {
+          event.preventDefault();
+          var email = emailCopy.getAttribute('href').replace(/^mailto:/, '');
+          copyEmailAddress(email).then(function () {
+            window.clearTimeout(emailCopyTimer);
+            sizeEmailCopy(true);
+            emailCopy.classList.add('is-copied');
+            emailCopyStatus.textContent = 'Email address copied to clipboard.';
+            emailCopyTimer = window.setTimeout(function () {
+              sizeEmailCopy(false);
+              emailCopy.classList.remove('is-copied');
+              emailCopyStatus.textContent = '';
+            }, 2000);
+          }).catch(function () {
+            window.location.href = emailCopy.href;
+          });
+        });
+      }
 
       function focusShiftBio(paragraph, copy, mutate, showExpandedGhost, duration) {
         var container = paragraph.parentElement;
